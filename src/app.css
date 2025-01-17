@@ -1,0 +1,78 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+/* Login styles */
+.login-container {
+	max-width: 400px;
+	margin: 2rem auto;
+	padding: 2rem;
+	border: 1px solid #ccc;
+	border-radius: 8px;
+}
+
+.form-group {
+	margin-bottom: 1rem;
+}
+
+.form-group label {
+	display: block;
+	margin-bottom: 0.5rem;
+}
+
+.form-group input {
+	width: 100%;
+	padding: 0.5rem;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+}
+
+.form-group button {
+	width: 100%;
+	padding: 0.75rem;
+	background-color: #4caf50;
+	color: white;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+}
+
+.form-group button:hover {
+	background-color: #45a049;
+}
+
+.error {
+	color: red;
+	margin-bottom: 1rem;
+}
+
+/* Navigation styles */
+nav {
+	background-color: #333;
+	padding: 1rem;
+}
+
+.nav-content {
+	display: flex;
+	justify-content: space-between;
+	max-width: 1200px;
+	margin: 0 auto;
+}
+
+nav a {
+	color: white;
+	text-decoration: none;
+}
+
+nav button {
+	background: none;
+	border: none;
+	color: white;
+	cursor: pointer;
+}
+
+main {
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 1rem;
+}

@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { auth } from '$lib/stores/auth';
 	import { format } from 'date-fns';
-	import { FireIcon } from 'svelte-hero-icons';
+	import { Icon, Fire } from 'svelte-hero-icons';
 
 	const today = new Date();
 	const formattedDate = format(today, 'EEEE, MMMM d, yyyy');
@@ -15,7 +15,7 @@
 			<h1 class="text-3xl font-bold text-gray-900">Journal</h1>
 		</div>
 		<div class="flex items-center gap-2 rounded-full bg-orange-100 px-4 py-2">
-			<FireIcon class="h-6 w-6 text-orange-500" />
+			<Icon src={Fire} class="h-6 w-6 text-orange-500" />
 			<span class="font-semibold text-orange-700">{currentStreak} day streak!</span>
 		</div>
 	</div>

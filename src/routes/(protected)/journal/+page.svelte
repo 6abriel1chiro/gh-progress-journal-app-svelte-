@@ -1,5 +1,6 @@
 <script lang="ts">
-	import { auth } from '$lib/stores/auth';
+	import NewEntry from '../../../components/NewEntry.svelte';
+	import EntriesList from '../../../components/EntriesList.svelte';
 	import { format } from 'date-fns';
 	import { Icon, Fire } from 'svelte-hero-icons';
 
@@ -20,38 +21,8 @@
 		</div>
 	</div>
 
-	{#if $auth.isAuthenticated}
-		<div class="space-y-6">
-			<!-- Recent Entries Section -->
-			<div class="rounded-lg border border-gray-200 bg-white p-6 shadow-sm">
-				<h2 class="mb-4 text-xl font-semibold text-gray-800">Today's Entry</h2>
-				<textarea
-					class="h-40 w-full rounded-lg border border-gray-300 p-4 focus:border-transparent focus:ring-2 focus:ring-blue-500"
-					placeholder="Write your thoughts for today..."
-				>
-				</textarea>
-				<div class="mt-4 flex justify-end">
-					<button
-						class="rounded-lg bg-blue-600 px-4 py-2 text-white transition-colors hover:bg-blue-700"
-						>Save Entry</button
-					>
-				</div>
-			</div>
-
-			<!-- Previous Entries -->
-			<div class="rounded-lg border border-gray-200 bg-white p-6 shadow-sm">
-				<h2 class="mb-4 text-xl font-semibold text-gray-800">Previous Entries</h2>
-				<div class="space-y-4">
-					{#each Array(3) as _, i}
-						<div class="border-b border-gray-200 pb-4 last:border-0">
-							<p class="text-sm text-gray-600">
-								{format(new Date().setDate(today.getDate() - i - 1), 'MMMM d, yyyy')}
-							</p>
-							<p class="mt-2 text-gray-800">Sample journal entry for day {i + 1}...</p>
-						</div>
-					{/each}
-				</div>
-			</div>
-		</div>
-	{/if}
+	<div class="space-y-8">
+		<NewEntry />
+		<EntriesList />
+	</div>
 </div>
